@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str = "object-oriented programming with Python"
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-print(str)
+str = "Python is an interpreted, interactive, object-oriented programming\
+ language that combines remarkable power with very clear syntax"
+print(str[39:67] + str[:6])
