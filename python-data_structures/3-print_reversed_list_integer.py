@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/usr/bash/python3
 def print_reversed_list_integers(my_list=[]):
     for i in range(len(my_list) - 1, -1, -1):
         print(my_list[i])
