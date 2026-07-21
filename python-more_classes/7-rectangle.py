@@ -5,9 +5,13 @@
 class Rectangle:
     """Represents a rectangle."""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -44,11 +48,13 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        rows = ["#" * self.__width for _ in range(self.__height)]
+        symbol = str(self.print_symbol)
+        rows = [symbol * self.__width for _ in range(self.__height)]
         return "\n".join(rows)
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__heigh)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
